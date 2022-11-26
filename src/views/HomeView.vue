@@ -1,5 +1,6 @@
 <template>
   <main>Home</main>
+  <el-button type="primary">OK</el-button>
 </template>
 
 <script setup></script>

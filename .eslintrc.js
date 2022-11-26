@@ -11,5 +11,8 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['vue'],
-  rules: {}
+  rules: {
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/no-unresolved': ['error', { devDependencies: true }]
+  }
 }
