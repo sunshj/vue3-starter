@@ -1,0 +1,49 @@
+[
+  {
+    "path": "/welcome",
+    "authName": "首页欢迎",
+    "icon": "iconfont icon-shouye"
+  },
+  {
+    "path": "/users",
+    "authName": "客户管理",
+    "icon": "iconfont icon-kehuguanli"
+  },
+  {
+    "path": "/charts",
+    "authName": "图表统计",
+    "icon": "iconfont icon-shujuzhongxin"
+  },
+  {
+    "path": "/settings",
+    "authName": "其他设置",
+    "icon": "iconfont icon-guanli",
+    "children": [
+      {
+        "path": "/settings/home",
+        "authName": "功能设置",
+        "icon": "iconfont icon-renwuguanli"
+      },
+      {
+        "path": "/settings/editor",
+        "authName": "在线编辑",
+        "icon": "iconfont icon-shijianmoban"
+      },
+      {
+        "path": "/settings/dev",
+        "authName": "开发设置",
+        "icon": "iconfont icon-APIguanli"
+      }
+    ]
+  },
+  {
+    "path": "/admin",
+    "authName": "用户管理",
+    "icon": "iconfont icon-yonghuhuaxiang"
+  },
+  {
+    "path": "/logs",
+    "authName": "日志信息",
+    "icon": "iconfont icon-shujuguanli"
+  }
+]
