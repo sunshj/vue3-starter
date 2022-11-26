@@ -36,19 +36,22 @@
     left: 0;
     display: block;
     overflow-x: hidden;
+    padding-bottom: 60px;
     border-right: 1px solid rgb(217, 217, 217);
     background-color: white;
 
     .toggle_collapse {
-      position: absolute;
+      position: fixed;
+      z-index: 99;
       bottom: 0;
       display: flex;
       overflow: hidden;
       align-items: center;
-      width: 100%;
+      width: inherit;
       padding: 4px 0 4px 20px;
       cursor: pointer;
       border-top: 1px solid rgb(217, 217, 217);
+      background-color: #fff;
       line-height: 48px;
 
       &:hover i {
@@ -69,10 +72,6 @@
     .home_menu {
       border-right: none;
 
-      &.is-active {
-        background-color: #f2f2f2 !important;
-      }
-
       i {
         color: #0051c3;
       }
@@ -81,6 +80,10 @@
 }
 
 .el-menu-item {
+  &.is-active {
+    background-color: #f2f2f2 !important;
+  }
+
   i {
     color: #0051c3;
   }
