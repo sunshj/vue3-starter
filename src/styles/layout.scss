@@ -1,7 +1,7 @@
-.home_container {
+.layout_container {
   height: 100%;
 
-  .home_header {
+  .layout_header {
     position: relative;
     display: flex;
     align-items: center;
@@ -29,7 +29,7 @@
     }
   }
 
-  .home_aside {
+  .layout_aside {
     position: absolute;
     top: 60px;
     bottom: 0;
@@ -68,23 +68,5 @@
         font-size: 14px;
       }
     }
-
-    .home_menu {
-      border-right: none;
-
-      i {
-        color: #0051c3;
-      }
-    }
-  }
-}
-
-.el-menu-item {
-  &.is-active {
-    background-color: #f2f2f2 !important;
-  }
-
-  i {
-    color: #0051c3;
   }
 }
