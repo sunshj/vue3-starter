@@ -3,6 +3,7 @@
 
   .layout_header {
     position: relative;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -10,7 +11,8 @@
     height: 60px;
     padding-left: 10px;
     border-bottom: 1px solid rgb(217, 217, 217);
-    background-color: #fff;
+    background: rgba(255, 255, 255, .7);
+    backdrop-filter: saturate(50%) blur(8px);
 
     .logo_title_wrap {
       display: flex;

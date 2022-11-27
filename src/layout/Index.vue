@@ -64,11 +64,12 @@ onBeforeMount(() => {
 
 .layout_main {
   position: absolute;
-  top: 60px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: v-bind(collapseWidth);
   overflow-y: auto;
+  padding-top: 80px;
   background-color: #e9edf1;
 }
 </style>

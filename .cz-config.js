@@ -15,7 +15,7 @@ module.exports = {
     { value: 'ci', name: 'ci:       修改 CI 配置、脚本' },
     {
       value: 'chore',
-      name: 'chore:    对构建过程或辅助工具和库的更改（不影响源文件、测试用例）'
+      name: 'chore:    杂项：其他无法归类的变更，比如代码合并'
     },
     { value: 'revert', name: 'revert:   回滚 commit' }
   ],

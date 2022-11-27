@@ -359,7 +359,8 @@
       "font-emphasize-style",
       "font-smooth",
       "line-height",
-      "gap"
+      "gap",
+      "backdrop-filter"
     ]
   ]
 }
