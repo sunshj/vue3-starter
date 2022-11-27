@@ -1,18 +1,16 @@
 <template>
-  <el-card shadow="hover" class="card_wrap">
-    <div class="card_title">
+  <el-card shadow="hover" class="custom-card">
+    <div class="custom-card__title">
       <slot name="title">{{ title }}</slot>
     </div>
 
-    <div class="card_content">
+    <div class="custom-card__content">
       <slot name="content"></slot>
     </div>
   </el-card>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
-
 defineProps({
   title: String
 })
@@ -23,18 +21,17 @@ defineProps({
   padding: 0 !important;
 }
 
-.card_wrap {
-  min-width: 300px;
+.custom-card {
   margin-top: 15px;
 
-  .card_title {
+  &__title {
     padding: 15px;
     background-color: #f7f9fb;
     font-size: 24px;
     font-weight: bold;
   }
 
-  .card_content {
+  &__content {
     padding: 10px;
   }
 }

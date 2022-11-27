@@ -44,7 +44,7 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount, onMounted, defineProps, toRefs } from 'vue'
+import { ref, onBeforeMount, onMounted, toRefs } from 'vue'
 import axios from '../utils/axios'
 
 const props = defineProps(['isCollaspe'])
