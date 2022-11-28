@@ -1,7 +1,7 @@
 import Axios from 'axios'
 import { ElMessage } from 'element-plus'
 
-const baseURL = ''
+const baseURL = 'https://api.sunshj.top'
 
 const axios = Axios.create({
   baseURL,

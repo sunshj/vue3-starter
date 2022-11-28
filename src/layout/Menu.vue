@@ -55,8 +55,8 @@ const menusList = ref([])
 
 // 获取菜单-模拟请求
 const getMenus = async () => {
-  const { data: res } = await axios.get('/mock/menus.json')
-  menusList.value = res
+  const { data: res } = await axios.get('/menus')
+  menusList.value = res.data
 }
 
 // 保存导航路径状态
