@@ -12,6 +12,7 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.0.10",
     "axios": "^1.2.0",
+    "darkreader": "^4.9.58",
     "element-plus": "^2.2.25",
     "pinia": "^2.0.26",
     "vue": "^3.2.45",

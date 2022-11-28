@@ -6,6 +6,7 @@
         <img src="@/assets/logo.svg" />
         <span>{{ dashTitle }}</span>
       </div>
+      <custom-dark-switch></custom-dark-switch>
     </el-header>
     <!-- main container -->
     <el-container>
@@ -31,6 +32,7 @@
 
 <script setup>
 import Menu from './Menu.vue'
+import CustomDarkSwitch from '../components/CustomDarkSwitch.vue'
 
 import { ref, onBeforeMount, computed } from 'vue'
 
