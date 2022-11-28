@@ -2,7 +2,7 @@
   height: 100%;
 
   .layout_header {
-    position: relative;
+    position: fixed;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
     height: 60px;
     padding-left: 10px;
     border-bottom: 1px solid rgb(217, 217, 217);
-    background: rgba(255, 255, 255, .7);
+    background: rgba(255, 255, 255, 0.7);
     backdrop-filter: saturate(50%) blur(8px);
 
     .logo_title_wrap {
@@ -32,7 +32,7 @@
   }
 
   .layout_aside {
-    position: absolute;
+    position: fixed;
     top: 60px;
     bottom: 0;
     left: 0;
@@ -43,7 +43,7 @@
     background-color: white;
 
     .toggle_collapse {
-      position: fixed;
+      position: absolute;
       z-index: 99;
       bottom: 0;
       display: flex;
@@ -61,7 +61,7 @@
       }
 
       i {
-        transition: transform .15s ease-in-out;
+        transition: transform 0.15s ease-in-out;
         color: #0051c3;
         font-size: 20px;
       }
