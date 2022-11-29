@@ -15,9 +15,9 @@ const isDark = ref(false)
 
 const toggleDarkMode = () => {
   if (isDark.value) {
-    disableDark()
-  } else {
     enableDark()
+  } else {
+    disableDark()
   }
   sessionStorage.setItem('darkMode', isDark.value.toString())
 }
