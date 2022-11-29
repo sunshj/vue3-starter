@@ -9,12 +9,16 @@
 
 <script setup>
 import { onBeforeMount, onMounted, ref } from 'vue'
-import { enableDark, disableDark } from '../common/Dark'
+import { disableDark, enableDark } from '@/common/Dark'
 
 const isDark = ref(false)
 
 const toggleDarkMode = () => {
-  isDark.value ? enableDark() : disableDark()
+  if (isDark.value) {
+    disableDark()
+  } else {
+    enableDark()
+  }
   sessionStorage.setItem('darkMode', isDark.value.toString())
 }
 
@@ -34,6 +38,7 @@ onMounted(() => {
   background-position: center center;
   background-size: 75%;
 }
+
 .el-switch.is-checked {
   :deep(.el-switch__core .el-switch__action) {
     background-image: url('../assets/icons/moon.png');

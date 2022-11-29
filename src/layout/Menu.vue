@@ -1,7 +1,7 @@
 <template>
   <el-menu
     class="layout_menu"
-    :collapse="isCollaspe"
+    :collapse="isCollapse"
     :collapse-transition="false"
     router
     text-color="#000"
@@ -44,11 +44,11 @@
 </template>
 
 <script setup>
-import { ref, onBeforeMount, onMounted, toRefs } from 'vue'
+import { onBeforeMount, onMounted, ref, toRefs } from 'vue'
 import axios from '../utils/axios'
 
-const props = defineProps(['isCollaspe'])
-const { isCollaspe } = toRefs(props)
+const props = defineProps(['isCollapse'])
+const { isCollapse } = toRefs(props)
 
 const activePath = ref('')
 const menusList = ref([])

@@ -39,7 +39,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { ElMessage } from 'element-plus'
+import { ElMessage as $message } from 'element-plus'
 import CustomCard from '../components/CustomCard.vue'
 import CustomBreadcrumb from '../components/CustomBreadcrumb.vue'
 
@@ -53,7 +53,7 @@ const pathList = [
   }
 ]
 const showMessage = (value) => {
-  ElMessage[value](value)
+  $message[value](value)
 }
 </script>
 

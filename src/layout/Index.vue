@@ -13,7 +13,7 @@
       <!-- left aside -->
       <el-aside :width="isCollapse ? '64px' : '200px'" class="layout_aside">
         <!-- 导航菜单 -->
-        <Menu :is-collaspe="isCollapse"></Menu>
+        <Menu :is-collapse="isCollapse"></Menu>
         <!-- 底部控制侧边栏折叠区域 -->
         <div class="toggle_collapse" @click="toggleCollapse">
           <i
@@ -31,10 +31,9 @@
 </template>
 
 <script setup>
+import { ref, onBeforeMount, computed } from 'vue'
 import Menu from './Menu.vue'
 import CustomDarkSwitch from '../components/CustomDarkSwitch.vue'
-
-import { ref, onBeforeMount, computed } from 'vue'
 
 const dashTitle = ref('这是网站的标题')
 const isCollapse = ref(false)
@@ -46,7 +45,7 @@ const collapseWidth = computed(() => {
 // 切换侧边栏折叠/展开
 const toggleCollapse = () => {
   isCollapse.value = !isCollapse.value
-  sessionStorage.setItem('isCollapse', isCollapse.value)
+  sessionStorage.setItem('isCollapse', isCollapse.value.toString())
 }
 
 // 移动端默认设置
@@ -56,7 +55,7 @@ const mobileOptimization = () => {
 }
 
 onBeforeMount(() => {
-  isCollapse.value = sessionStorage.getItem('isCollapse') === 'true' ? true : false
+  isCollapse.value = sessionStorage.getItem('isCollapse') === 'true'
   if (Reflect.has(window, 'ontouchstart')) mobileOptimization()
 })
 </script>

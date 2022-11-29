@@ -4,7 +4,12 @@ module.exports = {
     es2021: true,
     node: true
   },
-  extends: ['plugin:vue/vue3-essential', 'airbnb-base', 'plugin:prettier/recommended'],
+  extends: [
+    'plugin:import/recommended',
+    'plugin:vue/vue3-essential',
+    'airbnb-base',
+    'plugin:prettier/recommended'
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -12,7 +17,9 @@ module.exports = {
   },
   plugins: ['vue'],
   rules: {
-    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
-    'import/no-unresolved': ['error', { devDependencies: true }]
+    'vue/multi-word-component-names': 0,
+    'import/no-unresolved': 0,
+    'import/no-extraneous-dependencies': 0,
+    'import/extensions': 0
   }
 }
