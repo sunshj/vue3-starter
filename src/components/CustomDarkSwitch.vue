@@ -4,12 +4,15 @@
     active-color="#2F2F2F"
     inactive-color="#F1F1F1"
     @change="toggleDarkMode"
+    @click="darkSwitchClick"
   ></el-switch>
 </template>
 
 <script setup>
 import { onBeforeMount, onMounted, ref } from 'vue'
 import { disableDark, enableDark } from '@/common/Dark'
+
+const emit = defineEmits(['darkModeChange'])
 
 const isDark = ref(false)
 
@@ -20,6 +23,10 @@ const toggleDarkMode = () => {
     disableDark()
   }
   sessionStorage.setItem('darkMode', isDark.value.toString())
+}
+
+const darkSwitchClick = () => {
+  emit('darkModeChange', isDark.value)
 }
 
 onBeforeMount(() => {

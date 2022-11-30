@@ -53,7 +53,11 @@ const pathList = [
   }
 ]
 const showMessage = (value) => {
-  $message[value](value)
+  $message({
+    type: value,
+    message: value,
+    grouping: true
+  })
 }
 </script>
 

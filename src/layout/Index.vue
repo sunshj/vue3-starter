@@ -6,7 +6,7 @@
         <img src="@/assets/logo.svg" />
         <span>{{ dashTitle }}</span>
       </div>
-      <custom-dark-switch></custom-dark-switch>
+      <custom-dark-switch @dark-mode-change="darkModeSwitchChange"></custom-dark-switch>
     </el-header>
     <!-- main container -->
     <el-container>
@@ -32,8 +32,13 @@
 
 <script setup>
 import { ref, onBeforeMount, computed } from 'vue'
+import { ElMessage } from 'element-plus'
 import Menu from './Menu.vue'
 import CustomDarkSwitch from '../components/CustomDarkSwitch.vue'
+
+const darkModeSwitchChange = (val) => {
+  ElMessage.success(`已${val ? '开启' : '关闭'}暗黑模式`)
+}
 
 const dashTitle = ref('这是网站的标题')
 const isCollapse = ref(false)
