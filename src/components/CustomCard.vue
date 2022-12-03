@@ -5,6 +5,7 @@
     </div>
 
     <div class="custom-card__content">
+      <slot></slot>
       <slot name="content"></slot>
     </div>
   </el-card>
