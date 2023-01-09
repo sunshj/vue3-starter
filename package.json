@@ -18,6 +18,7 @@
     "darkreader": "^4.9.58",
     "echarts": "^5.4.0",
     "element-plus": "^2.2.25",
+    "mavon-editor": "^3.0.0-beta",
     "pinia": "^2.0.26",
     "vue": "^3.2.45",
     "vue-echarts": "^6.2.3",

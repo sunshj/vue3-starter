@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const Layout = () => import('../layout/Index.vue')
 const Welcome = () => import('../views/WelcomeView.vue')
 const Login = () => import('../views/Login.vue')
+const Chart = () => import('../views/ChartView.vue')
 
 const routes = [
   {
@@ -13,7 +14,10 @@ const routes = [
     path: '/index',
     component: Layout,
     redirect: '/welcome',
-    children: [{ path: '/welcome', component: Welcome }]
+    children: [
+      { path: '/welcome', component: Welcome },
+      { path: '/charts', component: Chart }
+    ]
   },
   { path: '/login', component: Login },
   {

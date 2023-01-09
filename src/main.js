@@ -1,8 +1,9 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
-import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import './assets/base.css'
+import { mavonEditor } from 'mavon-editor'
+import 'mavon-editor/dist/css/index.css'
 import App from './App.vue'
 import router from './router'
 import './router/permission'
@@ -11,8 +12,8 @@ import { vThrottle } from './common/directive'
 
 const app = createApp(App)
 app.component('font-awesome-icon', FontAwesomeIcon)
+app.component('mavon-editor', mavonEditor)
 app.directive('throttle', vThrottle)
-app.use(ElementPlus)
 app.use(createPinia())
 app.use(router)
 

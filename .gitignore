@@ -13,7 +13,6 @@ dist
 dist-ssr
 coverage
 *.local
-auto-imports.d.ts
 
 /cypress/videos/
 /cypress/screenshots/
@@ -27,3 +26,4 @@ auto-imports.d.ts
 *.njsproj
 *.sln
 *.sw?
+auto-imports.d.ts
